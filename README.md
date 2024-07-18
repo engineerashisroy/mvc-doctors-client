@@ -1,5 +1,9 @@
 # React + Vite
 
+# development by Ashis Roy
+
+# Full Stack MERN , NEXT and Java , Spring Boot Developer
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
