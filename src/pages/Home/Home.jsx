@@ -6,10 +6,14 @@ import ExceptionalDetails from "./ExceptionalDetails";
 import MakeAppointment from "./MakeAppointment";
 import Testimonials from "./Testimonials";
 import HomeContact from "./HomeContact";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
   return (
     <div>
+      <Helmet>
+        <title>Sintheya Clinic | Home</title>
+      </Helmet>
       <Banner></Banner>
       <Info></Info>
       <Services></Services>

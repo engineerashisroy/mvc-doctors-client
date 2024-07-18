@@ -9,6 +9,7 @@ import { useForm } from "react-hook-form";
 import auth from "../../firebase.init";
 import { Link, useNavigate } from "react-router-dom";
 import useToken from "../../hooks/useToken";
+import { Helmet } from "react-helmet";
 
 const Signup = () => {
   const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
@@ -47,6 +48,9 @@ const Signup = () => {
   };
   return (
     <div>
+      <Helmet>
+        <title>Sintheya Clinic | Sign Up</title>
+      </Helmet>
       <div className="hero bg-base-200 min-h-[80vh]">
         <div className="hero-content w-full mx-auto flex-col">
           <h1 className="text-3xl font-bold">Sign Up!</h1>

@@ -3,6 +3,7 @@ import { Link, Outlet } from "react-router-dom";
 import useAdmin from "../../hooks/useAdmin";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
+import { Helmet } from "react-helmet";
 
 const Dashboard = () => {
   const [user] = useAuthState(auth);
@@ -10,6 +11,9 @@ const Dashboard = () => {
   // console.log(admin);
   return (
     <div className="drawer md:drawer-open">
+      <Helmet>
+        <title>Sintheya Clinic | Deshboard</title>
+      </Helmet>
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content pl-9 flex flex-col sm:w-4/5 ">
         {/* Page content here */}
