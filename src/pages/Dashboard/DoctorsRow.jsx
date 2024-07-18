@@ -5,7 +5,7 @@ const DoctorsRow = ({ index, doctor, refetch }) => {
   const { name, image, speciality, email } = doctor;
 
   const handleDelete = (email) => {
-    fetch(`http://localhost:3000/api/v1/doctor/${email}`, {
+    fetch(`https://mvc-doctors-server.vercel.app/api/v1/doctor/${email}`, {
       method: "DELETE",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,

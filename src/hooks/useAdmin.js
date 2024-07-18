@@ -5,7 +5,7 @@ const useAdmin = (user) => {
   const [adminLoading, setAdminLoading] = useState(true);
   useEffect(() => {
     const email = user?.email;
-    fetch(`http://localhost:3000/api/v1/admin/${email}`, {
+    fetch(`https://mvc-doctors-server.vercel.app/api/v1/admin/${email}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

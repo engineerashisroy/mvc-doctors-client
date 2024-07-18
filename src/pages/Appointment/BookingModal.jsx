@@ -21,7 +21,7 @@ const BookingModal = ({ treatment, date, setTreatment, refetch }) => {
       slot: slot,
     };
 
-    fetch("http://localhost:3000/api/v1/booking", {
+    fetch("https://mvc-doctors-server.vercel.app/api/v1/booking", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

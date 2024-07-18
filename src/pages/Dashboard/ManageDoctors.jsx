@@ -11,7 +11,7 @@ const ManageDoctors = () => {
   } = useQuery({
     queryKey: ["doctors"],
     queryFn: () =>
-      fetch("http://localhost:3000/api/v1/doctor", {
+      fetch("https://mvc-doctors-server.vercel.app/api/v1/doctor", {
         method: "GET",
         headers: {
           authorization: `Bearer ${localStorage.getItem("accessToken")}`,
@@ -24,7 +24,7 @@ const ManageDoctors = () => {
 
   //   const [doctors, setDoctors] = useState([]);
   //   useEffect(() => {
-  //     fetch("http://localhost:3000/api/v1/doctor", {
+  //     fetch("https://mvc-doctors-server.vercel.app/api/v1/doctor", {
   //       method: "GET",
   //       headers: {
   //         authorization: `Bearer ${localStorage.getItem("accessToken")}`,

@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 const UsersRow = ({ user, index, refetch }) => {
   const { email, role } = user;
   const makeAdmin = () => {
-    fetch(`http://localhost:3000/api/v1/users/admin/${email}`, {
+    fetch(`https://mvc-doctors-server.vercel.app/api/v1/users/admin/${email}`, {
       method: "PUT",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,

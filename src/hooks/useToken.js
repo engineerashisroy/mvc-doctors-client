@@ -8,7 +8,7 @@ const useToken = (user) => {
     const email = user?.user?.email;
     const currentUser = { email: email };
     if (email) {
-      fetch(`http://localhost:3000/api/v1/user/${email}`, {
+      fetch(`https://mvc-doctors-server.vercel.app/api/v1/user/${email}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

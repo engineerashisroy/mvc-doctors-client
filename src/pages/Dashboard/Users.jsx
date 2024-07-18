@@ -13,7 +13,7 @@ const Users = () => {
   } = useQuery({
     queryKey: ["users"],
     queryFn: () =>
-      fetch("http://localhost:3000/api/v1/users", {
+      fetch("https://mvc-doctors-server.vercel.app/api/v1/users", {
         method: "GET",
         headers: {
           authorization: `Bearer ${localStorage.getItem("accessToken")}`,

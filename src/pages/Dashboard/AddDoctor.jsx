@@ -45,7 +45,7 @@ const AddDoctor = () => {
         // console.log(doctor);
 
         //send to data in mongodb database
-        fetch("http://localhost:3000/api/v1/doctor", {
+        fetch("https://mvc-doctors-server.vercel.app/api/v1/doctor", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

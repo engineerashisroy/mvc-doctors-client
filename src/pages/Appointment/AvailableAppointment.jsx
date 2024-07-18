@@ -18,18 +18,18 @@ const AvailableAppointment = ({ date }) => {
   } = useQuery({
     queryKey: ["available", formatedDate],
     queryFn: () =>
-      fetch(`http://localhost:3000/api/v1/available?date=${formatedDate}`).then(
-        (res) => res.json()
-      ),
+      fetch(
+        `https://mvc-doctors-server.vercel.app/api/v1/available?date=${formatedDate}`
+      ).then((res) => res.json()),
   });
 
   if (isLoading) {
     return <Loading></Loading>;
   }
   // useEffect(() => {
-  //   //all slot api http://localhost:3000/api/v1/service
+  //   //all slot api https://mvc-doctors-server.vercel.app/api/v1/service
   //   //available slot api
-  //   fetch(`http://localhost:3000/api/v1/available?date=${formatedDate}`)
+  //   fetch(`https://mvc-doctors-server.vercel.app/api/v1/available?date=${formatedDate}`)
   //     .then((res) => res.json())
   //     .then((data) => {
   //       setServices(data);
