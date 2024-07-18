@@ -1,4 +1,5 @@
 import React from "react";
+import site_logo from "../../assets/images/site_logo.png";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
 import auth from "../../firebase.init";
@@ -68,17 +69,20 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow "
             >
               {menuItem}
             </ul>
           </div>
-          <Link to="/" className="btn btn-ghost text-xl">
-            Doctors Potal
+          <Link to="/" className="btn btn-ghost text-xl p-0 m-0">
+            <div className="flex items-center justify-center">
+              <img src={site_logo} alt="site logo" className="w-10" />
+              <p className="italic text-3xl">Sintheya Clinic</p>
+            </div>
           </Link>
         </div>
-        <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
+        <div className="navbar-center hidden lg:flex bg-base-100">
+          <ul className="menu menu-horizontal px-1 md:text-2xl ">
             {/* destop menu  */}
             {menuItem}
           </ul>

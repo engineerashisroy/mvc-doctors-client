@@ -1,9 +1,10 @@
 import React from "react";
+import ReviewsHero from "./ReviewsHero";
 
 const Reviews = () => {
   return (
     <div>
-      <h1>This is review page</h1>
+      <ReviewsHero></ReviewsHero>
     </div>
   );
 };
